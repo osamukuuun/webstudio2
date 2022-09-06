@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+/* логотип */
+h1{
+    padding: 0;
+    margin: 0;
+}
+.logo{
+    display: flex;
+    font-family: 'Raleway';
+    color:#000000;
+    position: absolute;
+    width: 145px;
+    height: 31px;
+    left: 215px;
+    top: 24px;
+}
+
+.logo-span{
+    font-family: 'Raleway';
+    color: #2196F3;
+}
+
+/* меню */
+
+#toggle{
+    opacity: 0;
+}
+
+.container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    background: #FFFFFF;
+}
+
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.header {
+    padding: 17px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-list { 
+    display: flex;
+    position: absolute;
+    gap: 55px;
+    font-family: 'roboto';
+    width: 77px;
+    height: 16px;
+    left: 453px;
+    top: 32px;
+    color: 
+    #212121;   
+}
+
+
+/* mobile menu */
+#toggle {
+    display: none;
+}
+
+#toggle:checked ~ nav {
+    top: 80px;
+    opacity: 1;
+}
+
+.toggle_btn {
+    display: none;
+}
+
+.toggle_btn span {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #212121;
+    position: absolute;
+    top: calc(50% - 1px);
+}
+
+.toggle_btn span::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #212121;
+    position: absolute;
+    top: -8px;
+}
+
+.toggle_btn span::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #212121;
+    position: absolute;
+    top: 8px;
+}
+
+.menu-link {
+    text-decoration: none;
+    display: flex;
+    text-transform: uppercase;
+    font-family: 'roboto';
+    font-size: 14px;
+    line-height: 17px;
+    color:#212121;
+    margin: 0 auto;
+    transition: all 0.3s;
+    padding-left: 30%;
+}
+.menu-contacts{
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'roboto';
+    font-size: 14px;
+    line-height: 17px;
+    color:#212121;
+    gap: 30px;
+}
+
+.icon1{
+    display: flex;
+    position: absolute;
+    left: 65.75%;
+    right: 33.25%;
+    top: 1.16%;
+    bottom: 98.43%;
+}
+
+.icon2{
+    position: absolute;
+    left: 77.69%;
+    right: 21.69%;
+    top: 1.09%;
+    bottom: 98.36%;
+    
+}
+.menu-link:hover,.menu-contacts:hover{
+    color: #2196F3;
+    border-radius: 2px;
+    border-bottom: 3px solid #2196F3;
+}
+
+@media (max-width: 768px) {
+    .toggle_btn {
+        display: block;
+        width: 30px;
+        height: 25px;
+        position: relative;
+    }
+
+    nav {
+        position: absolute;
+        width: 100%;
+        top: -100%;
+        opacity: 0;
+        left: 0;
+        background: #fff;
+        box-shadow: 0 16px 15px #888;
+        padding-bottom: 30px;
+        transition: top .3s, opacity .3s;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
